@@ -5,7 +5,7 @@ const Saturn = () => {
   return (
     <div id='Saturn' className='w-full md:h-screen p-2 py-54 bg-gradient-to-b from-[#000000] to-[#1d1c30]'>
         <div className='max-w-[1400px] m-auto md:grid grid-cols-3 gap-8'>
-            <div className='col-span-2 text-white py-28'>
+            <div className='px-10 col-span-2 text-white py-28'>
                 <p>
                   What do you know about
                 </p>
