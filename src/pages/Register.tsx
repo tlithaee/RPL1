@@ -8,7 +8,7 @@ type FormValues = {
     firstName: string,
     lastName: string,
     email: string,
-    phoneNumber: number,
+    tel: number,
     gender: string,
     rilkh: boolean,
 }
@@ -32,13 +32,13 @@ export default function Home() {
           <link rel="icon" href="/favicon.ico" />
         </Head>
         
-        <main className='w-full m-auto bg-gradient-to-b from-[#1d1c30] to-[#301c1c]'>
+        <main className='min-h-screen w-full m-auto bg-gradient-to-b from-[#1d1c30] to-[#301c1c]'>
               <div className='pt-52'>
                 <h1 className='text-5xl text-white opacity-75 text-center font family-Georgia tracking-widest'>
                       WELCOME
                 </h1>
               </div>
-            <section className='min-h-screen flex items-center flex-col justify-center'>
+            <section className='pt-10 flex items-center flex-col justify-center'>
                 <form onSubmit={handleSubmit((data) =>  {
                     console.log(data)
                   })} className='flex flex-col gap-3' action="">
@@ -50,10 +50,10 @@ export default function Home() {
                       <p className='text-red-500/70'> {errors.firstName?.message} </p>
                     <input {...register("lastName", {required: 'Isi dongg'})} type="text" placeholder='Last Name' />
                     <p className='text-red-500/70'> {errors.lastName?.message} </p>
-                    <input {...register("lastName", {required: 'Isi dongg'})} type="email" placeholder='Email' />
-                    <p className='text-red-500/70'> {errors.lastName?.message} </p>
-                    <input {...register("lastName", {required: 'Isi dongg'})} type="tel" placeholder='Phone Number' />
-                    <p className='text-red-500/70'> {errors.lastName?.message} </p>
+                    <input {...register("email", {required: 'Isi dongg'})} type="email" placeholder='Email' />
+                    <p className='text-red-500/70'> {errors.email?.message} </p>
+                    <input {...register("tel", {required: 'Isi dongg'})} type="tel" placeholder='Phone Number' />
+                    <p className='text-red-500/70'> {errors.tel?.message} </p>
                     <label className='text-white' htmlFor="Gender">Gender</label>
                         <select {...register("gender")}>
                             <option value="Male">Male</option>

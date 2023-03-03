@@ -3,6 +3,7 @@ import Navbar from '@/Components/Navbar'
 import End from '@/Components/End'
 
 import { useState } from 'react';
+import Layout from '@/Components/Layout';
 
 export default function Home() {
 
@@ -76,7 +77,7 @@ export default function Home() {
         <meta name="description" content="width-device-width, Initial-scale-1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Navbar/>
+      <Layout>
         <form className='pt-20' onSubmit={handleSubmit}>
           <label htmlFor="name">Name:</label>
             <input
@@ -90,7 +91,7 @@ export default function Home() {
 
           <label htmlFor="email">Email:</label>
             <input
-              type="email"
+              type="text"
               id="email"
               name="email"
               value={formData.email}
@@ -100,7 +101,7 @@ export default function Home() {
 
           <button type="submit">Submit</button>
         </form>
-      <End/>
+        </Layout>
     </>
   )
 }
